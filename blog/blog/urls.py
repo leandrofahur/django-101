@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),    
     path('api/', views.api_root, name='api_root'),
     path('api/posts/', views.api_posts, name='api_posts'),
+    path('api/posts/<int:id>/', views.api_post_by_id, name='api_post_by_id')
 ]

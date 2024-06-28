@@ -16,3 +16,7 @@ def api_posts(request, format=None):
     ]
     return Response(posts)
 
+@api_view(['GET'])
+def api_post_by_id(request, id, format=None):
+    post = {'id': id, 'title': f'Post {id}', 'content': f'Content of post {id}'}
+    return Response(post)
