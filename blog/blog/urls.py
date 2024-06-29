@@ -21,10 +21,7 @@ from blog.views import PostListCreateView, PostDetailView
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),    
-    # path('api/', views.api_root, name='api_root'),
-    # path('api/posts/', views.api_posts, name='api_posts'),
-    # path('api/posts/<int:id>/', views.api_post_by_id, name='api_post_by_id')
+    path('admin/', admin.site.urls),        
     path('api/posts/', PostListCreateView.as_view(), name='api_posts'),
     path('api/posts/<int:pk>/', PostDetailView.as_view(), name='api_post_by_id'),
 
